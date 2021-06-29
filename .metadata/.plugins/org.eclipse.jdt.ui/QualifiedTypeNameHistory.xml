@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="covidAppModel.registrationModel"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.POST"/>
+    <fullyQualifiedTypeName name="covidAppService.registrationService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="covidAppModel.citizenDetailsModel"/>
+    <fullyQualifiedTypeName name="covidAppService.citizenDetailsService"/>
+    <fullyQualifiedTypeName name="covidAppService.userLoginService"/>
+    <fullyQualifiedTypeName name="covidAppModel.userLoginModel"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+    <fullyQualifiedTypeName name="covidAppModel.citizensLocationUpModel"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="covidAppModel.healthStatusModel"/>
+    <fullyQualifiedTypeName name="covidAppService.healthStatusService"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+    <fullyQualifiedTypeName name="covidAppService.citizensLocationUpService"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.DELETE"/>
+    <fullyQualifiedTypeName name="covidAppModel.deleteUserModel"/>
+    <fullyQualifiedTypeName name="covidAppService.deleteUserService"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="org.api.project.covidApp.service.registrationService"/>
+    <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
+    <fullyQualifiedTypeName name="org.api.project.covidApp.model.citizensLocationUpModel"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,38 @@
+//***
+** - Api project - Covid App- Project Configuration - *
+
+Requirements 
+	- angular, 
+	- node js, 
+	- visual studio code,
+	- eclipse
+**Step 1
+	- import api.sql file to xammp (database name= api, username= root, password= "")
+
+**Step 2
+	- Unzip the project called apiWebApplication.zip
+	- Open eclipse ide -> click file -> import-> existing maven project-> browse covidApp project->
+	  finish.
+
+	  After that,
+	     - eclipse will download all related files -
+	- Then run the project using tomcat server version 9.
+
+**Step 3 	
+	- Navigate to auctionUi project directory (step 2 unziped apiWebApplication.zip-> open covid19 folder ->
+	  type 'cmd' on covid19 root directory -> type 'code .' On command promt
+	  then,
+	- click new terminal (ctrl + shift + `) -> type 'ng serve --open'
+	- This configurations takes few minutes 
+
+	 --- After that website will open ---
+
+---------------If any error occurred during configuration steps--------------- 
+	       	please contact,
+
+		Name : Janitha Dilshan Hendhavitharana
+		Plymouth Index : 10673136
+		Email : jdhhendhavitharana@gmail.com
+		Contact No : 0710727407
+
+***//

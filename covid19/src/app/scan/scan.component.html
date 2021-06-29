@@ -1,0 +1,16 @@
+ <!-- ======= Hero Section ======= -->
+ <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Welcome to <span>COVID-19 Prevention System</span></h1>
+      <h2>Give your best effort for prevent covid 19 pandemic. </h2>
+      <a  class="btn-get-started scrollto"  routerLink="/scan">Scan Here</a>
+      <qr-scanner
+        [debug]="false"
+        [canvasWidth]="1080"
+        [canvasHeight]="720" 
+        [stopAfterScan]="true" 
+        [updateTime]="500"> 
+</qr-scanner>
+ 
+    </div>
+  </section><!-- End Hero -->

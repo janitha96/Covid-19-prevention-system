@@ -1,0 +1,136 @@
+ <!-- ======= Hero Section ======= -->
+ <section id="signupHero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+        <h1>SIGNUP HERE</h1>
+        <div class="container-fluid">
+        <form #signupForm="ngForm" (ngSubmit)="registerUser()">
+     
+          <!-- <small [class.text-danger]= "msg.status==500">{{msg.message}}</small> -->
+                 
+          <div class="row">
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                  <label for="validationCustom01" class="form-label">Full Nname</label>
+                  <input type="text" class="form-control"  name="name" [(ngModel)]="users.name"  required #name="ngModel"
+                  [class.is-invalid]="name.invalid && name.touched">
+                <small class="text-danger" [class.d-none]="name.valid || name.untouched"> Full name is required.</small>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                  <label for="validationCustom02" class="form-label">NIC</label>
+                  <input type="text" class="form-control" name="nic" [(ngModel)]="users.nic"  required #nic="ngModel"
+                  [class.is-invalid]="nic.invalid && nic.touched">
+                  <small class="text-danger" [class.d-none]="nic.valid || nic.untouched"> NIC is required.</small>
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                <label for="validationCustomUsername" class="form-label">Age</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">U</span>
+                    <input type="text" class="form-control" name="age" [(ngModel)]="users.age"  aria-describedby="inputGroupPrepend" required #age="ngModel"
+                    [class.is-invalid]="age.invalid && age.touched">
+               
+                  </div>
+                  <small class="text-danger" [class.d-none]="age.valid || age.untouched"> User name is required.</small>
+          
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                <label for="validationCustomUsername" class="form-label">E-mail</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" name="email" [(ngModel)]="users.email"  aria-describedby="inputGroupPrepend" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel"
+                    [class.is-invalid]="email.invalid && email.touched">
+               
+                  </div>
+               
+                  <div *ngIf="email.errors && (email.invalid && email.touched)">
+                    <small class="text-danger" *ngIf="email.errors.required" > E-mail is required.</small>
+                    <small class="text-danger" *ngIf="email.errors.pattern" > Enter valid E-mail.</small>
+                  </div>
+            </div>
+          </div>
+  
+
+  
+          <div class="row">
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                  <label for="validationCustom01" class="form-label">Contact 01</label>
+                  <input type="number" class="form-control"  name="tel1" [(ngModel)]="users.tel1"  required #tel1="ngModel"
+                  [class.is-invalid]="tel1.invalid && tel1.touched">
+                  <small class="text-danger" [class.d-none]="tel1.valid || tel1.untouched"> Contact number is required. You can fill one contact number.</small>
+              </div>
+  
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                  <label for="validationCustom02" class="form-label">Contact 02</label>
+                  <input type="number" class="form-control"  name="tel2" [(ngModel)]="users.tel2" >
+              </div>
+
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                <label for="validationCustom01" class="form-label">Profession</label>
+                <input type="text" class="form-control"  name="profession" [(ngModel)]="users.profession"  required #profession="ngModel"
+                [class.is-invalid]="profession.invalid && profession.touched">
+              <small class="text-danger" [class.d-none]="profession.valid || profession.untouched"> Profession is required.</small>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                <label for="validationCustom02" class="form-label">Affiliation</label>
+                <input type="text" class="form-control" name="affiliation" [(ngModel)]="users.affiliation"  required #affiliation="ngModel"
+                [class.is-invalid]="affiliation.invalid && affiliation.touched">
+                <small class="text-danger" [class.d-none]="affiliation.valid || affiliation.untouched"> Affiliation is required.</small>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-floating">
+                      <label for="validationCustom01" class="form-label">Address</label>
+                      <textarea class="form-control" placeholder="Leave a comment here" name="address" [(ngModel)]="users.address" #add="ngModel"
+                      [class.is-invalid]="add.invalid && add.touched" ></textarea>
+                     
+                    </div>
+                    <small class="text-danger" [class.d-none]="add.valid || add.untouched"> Address is required.</small>
+            
+              </div>
+              
+          </div>
+
+          
+          <div class="row">
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+              <label for="validationCustom01" class="form-label">Health Status</label>
+             <select  name="status"  class="form-control" [(ngModel)]="users.status">
+               <option value="Positive" >Positive</option>
+               <option value="Negative" >Negative</option>
+               <option value="Deceased" >Deceased</option>
+               <option value="Recovered" >Recovered</option>
+             </select>
+          </div>
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                  <label for="validationCustom01" class="form-label">Password</label>
+                  <input type="password" class="form-control"  name="password" [(ngModel)]="users.password"  required #password="ngModel"
+                  [class.is-invalid]="password.invalid && password.touched">
+            
+              </div>
+  
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+                  <label for="validationCustom02" class="form-label">Re-Password</label>
+                  <input type="password" class="form-control"  name="repwd"   required (ngModel)="repwd"  required #repwd="ngModel"
+                  [class.is-invalid]="repwd.invalid && repwd.touched" >
+              </div>
+              <small class="text-danger" [class.d-none]="(repwd.value == password.value) || repwd.untouched">Passwords are not same</small>
+          </div> 
+
+ <br>
+                  <div class="row">
+                     
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                      <button [disabled]="signupForm.form.invalid" type="submit" class="btn btn-warning login-button">Signin</button>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+                      <button type="button" class="btn btn-warning canel-button">Cancel</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+    </div>
+  </section><!-- End Hero -->
+

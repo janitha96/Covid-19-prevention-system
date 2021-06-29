@@ -1,0 +1,111 @@
+<div class="container-fluid" id="adminTop">
+   
+</div>
+
+<div class="left">
+    <div class="item">
+        <i class="fas fa-fw fa-bars"></i>
+    </div>
+    <div class="item">
+        <i class="fas fa-fw fa-columns"></i> Dashboard
+    </div>
+    <div class="item active">
+        <i class="fas fa-fw fa-map-marked-alt"></i> Map
+    </div>
+    <a  routerLink="/profiles"> <div class="item"  style=" background-color: #222;">
+        <i class="fas fa-fw fa-columns"></i> Profiles
+    </div></a>
+    <!-- <div class="item">
+        <i class="fas fa-fw fa-th"></i> Charities
+    </div> -->
+    <a  routerLink="/status">  <div class="item">
+      <i class="fas fa-fw fa-user-circle"></i> health Status
+    </div></a> 
+    <a  routerLink="/contacts">  <div class="item">
+      <i class="fas fa-fw fa-user-circle"></i> Contacts
+    </div></a>
+    <a  routerLink="/deleteuser">  <div class="item">
+      <i class="fas fa-fw fa-user-circle"></i> Delete User
+    </div></a>
+</div>
+
+<div class="container-fluid" id="adminTabs">
+    <form class="row g-3" #searchForm = ngForm (ngSubmit)="searchIdentity()">
+
+        <div class="col-auto">
+       
+          <input type="text" class="form-control"  name="nid" [(ngModel)]="nid" id="inputPassword2" placeholder="National Identity">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">Search Identity</button>
+        </div>
+      </form>
+      <div class="container">
+        <table class="table table-striped" *ngFor="let search of searchByNid">
+            <thead>
+               
+               <th>National ID</th>
+               <th>Name</th>
+               <th>Status</th>
+               <th>Age</th>
+               <th>Email</th>
+               <th>Profession</th>
+               <th>Affiliation</th>
+               <th>Contacts</th>
+               <th>Address</th>
+              </thead>
+              <tbody >
+
+                  <tr >
+                    <td>{{search.nid}}</td>
+                    <td>{{search.name}}</td>
+                    <td>{{search.status}}</td>
+                    <td>{{search.age}}</td>
+                    <td>{{search.email}}</td>
+                    <td>{{search.profession}}</td>
+                    <td>{{search.affiliation}}</td>
+                    <td>{{search.tel1}} / {{search.tel2}}</td>
+                    <td>{{search.address}}</td>
+                    
+                  </tr>
+       
+              </tbody>
+          </table>
+
+    </div>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+               
+               <th>National ID</th>
+               <th>Name</th>
+               <th>Status</th>
+               <th>Age</th>
+               <th>Email</th>
+               <th>Profession</th>
+               <th>Affiliation</th>
+               <th>Contacts</th>
+               <th>Address</th>
+              </thead>
+              <tbody >
+
+                  <tr *ngFor="let signup of signupDetails">
+                    <td>{{signup.nid}}</td>
+                    <td>{{signup.name}}</td>
+                    <td>{{signup.status}}</td>
+                    <td>{{signup.age}}</td>
+                    <td>{{signup.email}}</td>
+                    <td>{{signup.profession}}</td>
+                    <td>{{signup.affiliation}}</td>
+                    <td>{{signup.tel1}} / {{signup.tel2}}</td>
+                    <td>{{signup.address}}</td>
+                    
+                  </tr>
+       
+              </tbody>
+          </table>
+
+    </div>
+</div>
+
+

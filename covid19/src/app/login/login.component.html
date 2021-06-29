@@ -1,0 +1,25 @@
+ <!-- ======= Hero Section ======= -->
+ <section id="loginHero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+        <h1>LOGIN HERE</h1>
+        <form #loginForm="ngForm" (ngSubmit)="loginUser()">
+            <div class="form-group">
+              <label for="exampleInputEmail1">National Identity Card</label>
+              <input type="email" class="form-control"  name="nid" [(ngModel)]="user.nid" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control"  name="pwd" [(ngModel)]="user.pwd" id="exampleInputPassword1">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <small routerLink="/signup" class="form-text text-muted">IF YOU HAVE NOT AN ACCOUNT, SIGNUP HERE....</small>
+            </div>
+         
+       
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+  </section><!-- End Hero -->
